@@ -1,13 +1,10 @@
 import React from 'react';
 
- 
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      value: ''
-    };
   }
 
   handleInputChange(e) {
@@ -23,8 +20,9 @@ class Search extends React.Component {
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
-          onChange={this.handleInputChange.bind(this)}
+          value={props.value}
+          onChange={props.clickFunc}
+          // ()=> {props.clickFunc(props.value)}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
